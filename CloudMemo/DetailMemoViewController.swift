@@ -42,4 +42,20 @@ class DetailMemoViewController: UIViewController {
         }
     }
     
+    @IBAction func delete() {
+        selectedMemo.deleteInBackground { (error) in
+            if error != nil {
+                print(error)
+            } else {
+                // 削除が成功
+                let alertController = UIAlertController(title: "削除完了", message: "メモの削除が完了しました。メモ一覧に戻ります。", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                alertController.addAction(action)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+    
 }
