@@ -7,5 +7,6 @@ target 'CloudMemo' do
 
   # Pods for CloudMemo
   pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
+  pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 
 end

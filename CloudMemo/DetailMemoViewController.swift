@@ -8,6 +8,7 @@
 
 import UIKit
 import NCMB
+import SVProgressHUD
 
 class DetailMemoViewController: UIViewController {
     
@@ -29,7 +30,7 @@ class DetailMemoViewController: UIViewController {
         selectedMemo.setObject(memoTextView.text, forKey: "memo")
         selectedMemo.saveInBackground { (error) in
             if error != nil {
-                print(error)
+                SVProgressHUD.showError(withStatus: error?.localizedDescription)
             } else {
                 // 更新が成功
                 let alertController = UIAlertController(title: "更新完了", message: "メモの更新が完了しました。メモ一覧に戻ります。", preferredStyle: .alert)
@@ -45,7 +46,7 @@ class DetailMemoViewController: UIViewController {
     @IBAction func delete() {
         selectedMemo.deleteInBackground { (error) in
             if error != nil {
-                print(error)
+                SVProgressHUD.showError(withStatus: error?.localizedDescription)
             } else {
                 // 削除が成功
                 let alertController = UIAlertController(title: "削除完了", message: "メモの削除が完了しました。メモ一覧に戻ります。", preferredStyle: .alert)

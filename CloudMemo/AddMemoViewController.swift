@@ -33,7 +33,7 @@ class AddMemoViewController: UIViewController {
         object?.setObject(memoTextView.text, forKey: "memo")
         object?.saveInBackground({ (error) in
             if error != nil {
-                print(error)
+                SVProgressHUD.showError(withStatus: error?.localizedDescription)
             } else {
                 let alertController = UIAlertController(title: "保存完了", message: "メモの保存が完了しました。メモ一覧に戻ります。", preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
