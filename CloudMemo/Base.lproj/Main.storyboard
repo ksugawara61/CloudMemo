@@ -78,11 +78,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.92433690150000003" blue="0.1998255592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="save" destination="aIZ-yU-aXt" eventType="touchUpInside" id="j2P-Fa-bg0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="メモを追加" id="1Lu-us-Gb2"/>
+                    <connections>
+                        <outlet property="memoTextView" destination="LbI-9X-ANt" id="37g-iy-xl7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tn-Sp-dQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
