@@ -126,6 +126,9 @@
                     <navigationItem key="navigationItem" title="詳細" id="QQZ-NN-teM">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="5ee-z9-srE"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memoTextView" destination="Vjk-5B-lyT" id="Hmr-Cx-4ec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfP-3E-DSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,7 +20,9 @@ class MemoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Do any additional setup after loading the view.
         memoTableView.dataSource = self
         memoTableView.delegate   = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         loadMemo()
     }
 
@@ -37,6 +39,21 @@ class MemoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         cell.textLabel?.text = memoArray[indexPath.row].object(forKey: "memo") as? String
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toDetailMemo", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailMemo" {
+            // 次のコントローラを取得
+            let detailMemoViewController = segue.destination as! DetailMemoViewController
+            
+            let selectedIndex = memoTableView.indexPathForSelectedRow!
+            detailMemoViewController.selectedMemo = memoArray[selectedIndex.row]
+        }
     }
     
     func loadMemo() {

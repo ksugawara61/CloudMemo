@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import NCMB
 
 class DetailMemoViewController: UIViewController {
+    
+    var selectedMemo: NCMBObject!
+    @IBOutlet var memoTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        memoTextView.text = selectedMemo.object(forKey: "memo") as! String
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +25,4 @@ class DetailMemoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
