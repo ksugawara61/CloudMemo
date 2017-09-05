@@ -25,4 +25,21 @@ class DetailMemoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func update() {
+        selectedMemo.setObject(memoTextView.text, forKey: "memo")
+        selectedMemo.saveInBackground { (error) in
+            if error != nil {
+                print(error)
+            } else {
+                // 更新が成功
+                let alertController = UIAlertController(title: "更新完了", message: "メモの更新が完了しました。メモ一覧に戻ります。", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                alertController.addAction(action)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+    
 }

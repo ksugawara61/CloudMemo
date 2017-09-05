@@ -119,6 +119,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48161687250000002" green="0.87565750949999999" blue="0.9552378654" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="更新"/>
+                                <connections>
+                                    <action selector="update" destination="G5t-Id-R9b" eventType="touchUpInside" id="CgE-Zd-572"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
