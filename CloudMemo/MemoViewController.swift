@@ -20,6 +20,9 @@ class MemoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Do any additional setup after loading the view.
         memoTableView.dataSource = self
         memoTableView.delegate   = self
+        
+        // TableViewの不要な線を削除
+        memoTableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
