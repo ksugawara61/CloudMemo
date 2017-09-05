@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		79CCC9DA5977750FB47B9F8A /* Pods_CloudMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9BADB6A5207C5444CACCE3 /* Pods_CloudMemo.framework */; };
 		931525401F5EEEC500C44794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315253F1F5EEEC500C44794 /* AppDelegate.swift */; };
-		931525421F5EEEC500C44794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931525411F5EEEC500C44794 /* ViewController.swift */; };
 		931525451F5EEEC500C44794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931525431F5EEEC500C44794 /* Main.storyboard */; };
 		931525471F5EEEC500C44794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931525461F5EEEC500C44794 /* Assets.xcassets */; };
 		9315254A1F5EEEC500C44794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931525481F5EEEC500C44794 /* LaunchScreen.storyboard */; };
+		931525531F5EF20700C44794 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931525521F5EF20700C44794 /* MemoViewController.swift */; };
+		931525551F5EF22800C44794 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931525541F5EF22800C44794 /* AddMemoViewController.swift */; };
+		931525571F5EF24000C44794 /* DetailMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931525561F5EF24000C44794 /* DetailMemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10533EDCB6CAFCBFE47D1C0E /* Pods-CloudMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudMemo/Pods-CloudMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9315253C1F5EEEC500C44794 /* CloudMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9315253F1F5EEEC500C44794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		931525411F5EEEC500C44794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		931525441F5EEEC500C44794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		931525461F5EEEC500C44794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		931525491F5EEEC500C44794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9315254B1F5EEEC500C44794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		931525521F5EF20700C44794 /* MemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		931525541F5EF22800C44794 /* AddMemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		931525561F5EF24000C44794 /* DetailMemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMemoViewController.swift; sourceTree = "<group>"; };
 		DD5D072074A9C43483292B52 /* Pods-CloudMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudMemo/Pods-CloudMemo.release.xcconfig"; sourceTree = "<group>"; };
 		EB9BADB6A5207C5444CACCE3 /* Pods_CloudMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,11 +74,13 @@
 			isa = PBXGroup;
 			children = (
 				9315253F1F5EEEC500C44794 /* AppDelegate.swift */,
-				931525411F5EEEC500C44794 /* ViewController.swift */,
 				931525431F5EEEC500C44794 /* Main.storyboard */,
 				931525461F5EEEC500C44794 /* Assets.xcassets */,
 				931525481F5EEEC500C44794 /* LaunchScreen.storyboard */,
 				9315254B1F5EEEC500C44794 /* Info.plist */,
+				931525521F5EF20700C44794 /* MemoViewController.swift */,
+				931525541F5EF22800C44794 /* AddMemoViewController.swift */,
+				931525561F5EF24000C44794 /* DetailMemoViewController.swift */,
 			);
 			path = CloudMemo;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				931525421F5EEEC500C44794 /* ViewController.swift in Sources */,
+				931525551F5EF22800C44794 /* AddMemoViewController.swift in Sources */,
+				931525571F5EF24000C44794 /* DetailMemoViewController.swift in Sources */,
+				931525531F5EF20700C44794 /* MemoViewController.swift in Sources */,
 				931525401F5EEEC500C44794 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +387,7 @@
 				931525501F5EEEC500C44794 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
