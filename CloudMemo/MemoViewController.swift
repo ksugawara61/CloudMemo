@@ -8,6 +8,7 @@
 
 import UIKit
 import NCMB
+import SVProgressHUD
 
 class MemoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -63,7 +64,7 @@ class MemoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let query = NCMBQuery(className: "Memo")
         query?.findObjectsInBackground({ (result, error) in
             if error != nil {
-                print(error)
+                SVProgressHUD.showError(withStatus: error?.localizedDescription)
             } else {
                 self.memoArray = result as! [NCMBObject]
                 self.memoTableView.reloadData()

@@ -8,6 +8,7 @@
 
 import UIKit
 import NCMB
+import SVProgressHUD
 
 class AddMemoViewController: UIViewController {
     
